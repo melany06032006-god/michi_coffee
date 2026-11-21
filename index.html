@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michi Coffee · 猫カフェ | Café de gatos y comida japonesa en Cali</title>
+  <meta name="description" content="Michi Coffee es un café de gatos en Cali con comida japonesa (ramen, sushi, matcha y postres) y un pequeño centro de adopción de gatitos rescatados.">
+  <meta name="theme-color" content="#FFC7D6">
+  <link rel="icon" href="img/icono-michi.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@400;500;600;700&family=Noto+Sans+JP:wght@400&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- marca que hay JavaScript: solo así se esconden los textos que aparecen al bajar -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ HEADER (organismo: barra de navegación) ============ -->
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="nav__logo" href="#inicio" aria-label="Michi Coffee, volver al inicio">
+        <img src="img/icono-michi.svg" alt="" width="62" height="58">
+      </a>
+      <!-- en el computador los links se reparten en la barra; en el celular forman la tarjeta del menú ☰ -->
+      <div class="nav__panel" id="menu-panel">
+        <ul class="nav__lista" role="list">
+          <li><a class="nav__link" href="#inicio" data-ja="ホーム">Inicio</a></li>
+          <li><a class="nav__link" href="#promos" data-ja="プロモ">Promos</a></li>
+          <li><a class="nav__link" href="#adopta" data-ja="里親">Adopta</a></li>
+          <li><a class="nav__link" href="#nosotros" data-ja="私たち">Nosotros</a></li>
+          <li><a class="nav__link" href="#contacto" data-ja="連絡先">Contacto</a></li>
+        </ul>
+        <a class="boton boton--nav" href="#menu" data-ja="メニューを見る">Explora el menú</a>
+      </div>
+      <button class="idioma" type="button" id="idioma" aria-label="Cambiar idioma a japonés">ES</button>
+      <button class="menu-movil" type="button" id="menu-movil" aria-controls="menu-panel" aria-expanded="false" aria-label="Abrir menú">
+        <span class="menu-movil__raya" aria-hidden="true"></span>
+        <span class="menu-movil__raya" aria-hidden="true"></span>
+        <span class="menu-movil__raya" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="hero__capa hero__capa--huellas" data-parallax="-0.25" aria-hidden="true"></div>
+      <h1 class="hero__titulo" id="hero-titulo">
+        <img src="img/logo-michi.svg" alt="Logo de Michi Coffee: la palabra MICHI en rosado con chocolate derretido, donde la letra M es la carita de un gato sonriente, debajo la palabra COFFEE en café y 猫カフェ (café de gatos en japonés) en verde" width="960" height="489">
+      </h1>
+      <p class="hero__bajada" data-ja="カリのねこカフェ：和食とねこの里親">Un café de gatos en Cali con comida japonesa y michis en adopción.</p>
+    </section>
+
+    <div class="caramelo" aria-hidden="true"></div>
+
+    <!-- ============ PARALLAX: el local en capas ============ -->
+    <section class="local" aria-label="Así es nuestro local">
+      <div class="local__fondo" data-parallax="0.2" data-parallax-limite>
+        <img src="img/local.jpg" alt="Interior del restaurante Michi Coffee con luz cálida: mesas de mármol con flores blancas, sillas beige, un largo sofá rosado con un gato blanco sentado, una torre rascadora con un gato asomado, el logo de Michi Coffee en la pared, lámparas colgantes, una vitrina de postres y un gato atigrado durmiendo en un cojín con forma de huella" width="1672" height="941">
+      </div>
+      <div class="local__capa local__capa--1" data-parallax="-0.15" aria-hidden="true"></div>
+      <div class="local__capa local__capa--2" data-parallax="-0.4" aria-hidden="true"></div>
+    </section>
+
+    <div class="caramelo" aria-hidden="true"></div>
+
+    <!-- ============ ¿QUIÉNES SOMOS? ============ -->
+    <section class="nosotros" id="nosotros" aria-labelledby="nosotros-titulo">
+      <div class="contenedor nosotros__grid">
+        <div class="nosotros__texto">
+          <h2 class="titulo titulo--rosa" id="nosotros-titulo" data-ja="私たちについて">¿Quiénes somos?</h2>
+          <p>Somos un negocio en el cual queremos convertir cada visita en un momento especial. Nos inspiramos en la cultura japonesa para combinar deliciosos sabores, bebidas especiales y un ambiente lleno de encanto.</p>
+          <p>Creemos que la felicidad está en los pequeños detalles: un matcha bien preparado, un ramen calentito y un michi ronroneando a tu lado.</p>
+          <p>Por eso también somos un pequeño centro de adopción: los gatitos rescatados viven en nuestra sala de michis mientras encuentran un hogar para siempre.</p>
+        </div>
+        <aside class="gato" aria-label="Michi, nuestro gato barista">
+          <button class="gato__boton" type="button" id="gato" aria-label="Saluda a Michi, el gato barista">
+            <img src="img/gato/reposo.gif" alt="Michi, el gato barista animado en 3D: un gatito calicó gris, naranja y blanco con gorra fucsia con huellita, camisa blanca y delantal fucsia, que respira y se balancea mientras sostiene un vaso de café con las dos patitas" width="600" height="768" id="gato-img">
+          </button>
+          <p class="gato__pista" aria-live="polite" id="gato-pista">¡Tócalo para que te salude!</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PROMOS (módulo de cards) ============ -->
+    <section class="promos" id="promos" aria-labelledby="promos-titulo">
+     <!-- escenario fijo: al bajar, las tarjetas avanzan de lado (parallax horizontal) -->
+     <div class="promos__fijo">
+      <div class="promos__huellas" aria-hidden="true"></div>
+      <div class="promos__palabras" aria-hidden="true"><span>MICHI</span><span>RAMEN</span><span>MATCHA</span></div>
+      <h2 class="titulo titulo--verde" id="promos-titulo" data-ja="プロモーション">Nuestras promos</h2>
+      <div class="promos__escenario">
+      <ul class="promos__lista" role="list">
+        <li>
+          <article class="promo">
+            <img class="promo__img" src="img/promos/temporada-michi.jpg" alt="Dos flanes japoneses amarillos con forma de gatito, con orejitas y carita, bañados en salsa de caramelo sobre platos de cerámica con flores rosadas" width="800" height="640" loading="lazy">
+            <span class="etiqueta">NUEVO</span>
+            <div class="promo__info">
+              <h3 class="promo__nombre">Temporada Michi</h3>
+              <p class="promo__jp" lang="ja">ニャンコ</p>
+              <p class="promo__desc">Edición limitada · noviembre – febrero</p>
+              <p class="promo__precio">$24.000</p>
+            </div>
+            <button class="tarjeta-abrir" type="button" data-detalle="temporada-michi"><span class="sr">Ver detalle de Temporada Michi</span></button>
+          </article>
+        </li>
+        <li>
+          <article class="promo">
+            <img class="promo__img" src="img/promos/combo-ramen.jpg" alt="Combo de ramen: tazón de ramen shoyu con huevo, cerdo asado, cebollín y alga nori, junto a un plato de gyozas y un vaso de té verde frío con hielo" width="800" height="640" loading="lazy">
+            <span class="etiqueta">−30%</span>
+            <div class="promo__info">
+              <h3 class="promo__nombre">Combo Ramen</h3>
+              <p class="promo__jp" lang="ja">ねこ弁当</p>
+              <p class="promo__desc">Ramen shoyu + té verde frío + gyozas · Lun</p>
+              <p class="promo__precio">$33.000</p>
+            </div>
+            <button class="tarjeta-abrir" type="button" data-detalle="combo-ramen"><span class="sr">Ver detalle del Combo Ramen</span></button>
+          </article>
+        </li>
+        <li>
+          <article class="promo">
+            <img class="promo__img" src="img/promos/matcha-lovers.jpg" alt="Dos tazas de vidrio con matcha latte verde y una carita de gatito dibujada en la espuma, sobre una mesa de madera" width="800" height="450" loading="lazy">
+            <span class="etiqueta">2x1</span>
+            <div class="promo__info">
+              <h3 class="promo__nombre">Matcha Michi Lovers</h3>
+              <p class="promo__jp" lang="ja">抹茶</p>
+              <p class="promo__desc">Todos los días · 15:00 – 18:00</p>
+              <p class="promo__precio">$23.000</p>
+            </div>
+            <button class="tarjeta-abrir" type="button" data-detalle="matcha-lovers"><span class="sr">Ver detalle de Matcha Michi Lovers</span></button>
+          </article>
+        </li>
+      </ul>
+      </div>
+      <div class="promos__nav">
+        <p class="promos__contador" aria-hidden="true"><b id="promo-actual">01</b> / 03</p>
+        <div class="promos__puntos" role="group" aria-label="Elegir promoción">
+          <button type="button" aria-label="Promo 1: Temporada Michi" aria-current="true"></button>
+          <button type="button" aria-label="Promo 2: Combo Ramen"></button>
+          <button type="button" aria-label="Promo 3: Matcha Michi Lovers"></button>
+        </div>
+      </div>
+     </div>
+    </section>
+
+    <!-- ============ MENÚ (pestañas + cards) ============ -->
+    <section class="menu" id="menu" aria-labelledby="menu-titulo">
+      <div class="menu__huellas" data-parallax-fondo="0.3" aria-hidden="true"></div>
+      <h2 class="titulo titulo--cafe" id="menu-titulo" data-ja="メニュー">Explora el menú</h2>
+
+      <div class="pestanas" role="tablist" aria-label="Categorías del menú">
+        <button class="pestana" role="tab" id="tab-ramen" aria-controls="panel-ramen" aria-selected="true">Ramen <span lang="ja">ラーメン</span></button>
+        <button class="pestana" role="tab" id="tab-sushi" aria-controls="panel-sushi" aria-selected="false" tabindex="-1">Sushi <span lang="ja">寿司</span></button>
+        <button class="pestana" role="tab" id="tab-bebidas" aria-controls="panel-bebidas" aria-selected="false" tabindex="-1">Bebidas <span lang="ja">飲み物</span></button>
+        <button class="pestana" role="tab" id="tab-postres" aria-controls="panel-postres" aria-selected="false" tabindex="-1">Postres <span lang="ja">デザート</span></button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-ramen" aria-labelledby="tab-ramen">
+        <ul class="platos" role="list">
+          <li><article class="plato"><div class="plato__media" data-modelo="shoyu-ramen" tabindex="0"><img class="plato__img" src="img/menu/shoyu-ramen.gif" alt="Shoyu ramen en 3D girando: tazón blanco con caldo de soja, fideos, rodajas de cerdo asado, medio huevo, narutomaki, cebollín y una hoja de alga nori" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Shoyu Ramen</h3><p class="plato__precio">$27.000</p><p class="plato__jp" lang="ja">醤油ラーメン</p><button class="plato__ver" type="button" data-detalle="shoyu-ramen">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Shoyu Ramen</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="miso-ramen" tabindex="0"><img class="plato__img" src="img/menu/miso-ramen.gif" alt="Miso ramen en 3D girando: tazón blanco con caldo cremoso de miso amarillo, fideos, maíz, tofu, cerdo asado, huevo y alga nori" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Miso Ramen</h3><p class="plato__precio">$30.000</p><p class="plato__jp" lang="ja">味噌ラーメン</p><button class="plato__ver" type="button" data-detalle="miso-ramen">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Miso Ramen</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="spicy-ramen" tabindex="0"><img class="plato__img" src="img/menu/spicy-ramen.gif" alt="Spicy tantan ramen en 3D girando: tazón negro con caldo rojo picante de sésamo, fideos, carne molida sazonada, verduras y medio huevo" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Spicy Ramen</h3><p class="plato__precio">$33.000</p><p class="plato__jp" lang="ja">ピリ辛担々麺</p><button class="plato__ver" type="button" data-detalle="spicy-ramen">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Spicy Ramen</span></button></div></article></li>
+        </ul>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-sushi" aria-labelledby="tab-sushi" hidden>
+        <ul class="platos" role="list">
+          <li><article class="plato"><div class="plato__media" data-modelo="salmon-roll" tabindex="0"><img class="plato__img" src="img/menu/salmon-roll.gif" alt="Salmon roll en 3D girando: seis piezas de sushi cubiertas con láminas de salmón sobre una tabla de madera, con un poco de wasabi" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Salmon Roll</h3><p class="plato__precio">$28.000</p><p class="plato__jp" lang="ja">サーモンロール</p><button class="plato__ver" type="button" data-detalle="salmon-roll">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Salmon Roll</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="california-roll" tabindex="0"><img class="plato__img" src="img/menu/california-roll.gif" alt="California roll en 3D girando: piezas de sushi envueltas en alga nori con arroz y relleno de colores sobre una tabla de madera" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">California Roll</h3><p class="plato__precio">$24.000</p><p class="plato__jp" lang="ja">カリフォルニアロール</p><button class="plato__ver" type="button" data-detalle="california-roll">Ver plato real <span aria-hidden="true">→</span><span class="sr">: California Roll</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="tempura-roll" tabindex="0"><img class="plato__img" src="img/menu/tempura-roll.gif" alt="Tempura roll en 3D girando: rollos de arroz con aguacate y colitas de langostino en tempura asomándose, sobre una tabla de madera" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Tempura Roll</h3><p class="plato__precio">$30.000</p><p class="plato__jp" lang="ja">天ぷらロール</p><button class="plato__ver" type="button" data-detalle="tempura-roll">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Tempura Roll</span></button></div></article></li>
+        </ul>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-bebidas" aria-labelledby="tab-bebidas" hidden>
+        <ul class="platos platos--carrusel" role="list" tabindex="0" aria-label="Bebidas, desliza para ver más">
+          <li><article class="plato"><div class="plato__media" data-modelo="capuchino" tabindex="0"><img class="plato__img" src="img/menu/capuchino.gif" alt="Capuchino en 3D girando: taza blanca con un conejito dibujado en la espuma, sobre un platito con cucharita" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Capuchino</h3><p class="plato__precio">$9.000</p><p class="plato__jp" lang="ja">カプチーノ</p><button class="plato__ver" type="button" data-detalle="capuchino">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Capuchino</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="matcha-latte" tabindex="0"><img class="plato__img" src="img/menu/matcha-latte.gif" alt="Matcha latte en 3D girando: vaso alto de vidrio con una capa de leche abajo y matcha verde arriba, con un pitillo verde" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Matcha Latte</h3><p class="plato__precio">$13.000</p><p class="plato__jp" lang="ja">抹茶ラテ</p><button class="plato__ver" type="button" data-detalle="matcha-latte">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Matcha Latte</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="choco-gato" tabindex="0"><img class="plato__img" src="img/menu/choco-gato.gif" alt="Choco-gato en 3D girando: taza de borde azul con chocolate caliente y la carita de un gatito dibujada en la espuma, con granos de café alrededor" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Choco-gato</h3><p class="plato__precio">$8.000</p><p class="plato__jp" lang="ja">ねこココア</p><button class="plato__ver" type="button" data-detalle="choco-gato">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Choco-gato</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="te-de-hierbas" tabindex="0"><img class="plato__img" src="img/menu/te-de-hierbas.gif" alt="Té de hierbas en 3D girando: taza de porcelana blanca con rayas azules llena de té verde con hojitas, sobre un platito" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Té de Hierbas</h3><p class="plato__precio">$3.000</p><p class="plato__jp" lang="ja">ハーブティー</p><button class="plato__ver" type="button" data-detalle="te-de-hierbas">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Té de Hierbas</span></button></div></article></li>
+        </ul>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-postres" aria-labelledby="tab-postres" hidden>
+        <ul class="platos" role="list">
+          <li><article class="plato"><div class="plato__media" data-modelo="mochi-de-fresa" tabindex="0"><img class="plato__img" src="img/menu/mochi-de-fresa.gif" alt="Mochi de fresa en 3D girando: tres bolitas de mochi rosado sobre un plato, una partida por la mitad mostrando la fresa y la crema por dentro" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Mochi de Fresa</h3><p class="plato__precio">$9.000</p><p class="plato__jp" lang="ja">いちご大福</p><button class="plato__ver" type="button" data-detalle="mochi-de-fresa">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Mochi de Fresa</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="dorayaki" tabindex="0"><img class="plato__img" src="img/menu/dorayaki.gif" alt="Dorayaki en 3D girando: dos pancakes japoneses dorados rellenos de pasta de frijol rojo, sobre un plato oscuro" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Dorayaki</h3><p class="plato__precio">$11.000</p><p class="plato__jp" lang="ja">どら焼き</p><button class="plato__ver" type="button" data-detalle="dorayaki">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Dorayaki</span></button></div></article></li>
+          <li><article class="plato"><div class="plato__media" data-modelo="taiyaki" tabindex="0"><img class="plato__img" src="img/menu/taiyaki.gif" alt="Taiyaki en 3D girando: pastelito dorado con forma de pez sobre un plato oscuro" width="728" height="663" loading="lazy"></div><div class="plato__info"><h3 class="plato__nombre">Taiyaki</h3><p class="plato__precio">$13.000</p><p class="plato__jp" lang="ja">たい焼き</p><button class="plato__ver" type="button" data-detalle="taiyaki">Ver plato real <span aria-hidden="true">→</span><span class="sr">: Taiyaki</span></button></div></article></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ADOPTA ============ -->
+    <section class="adopta" id="adopta" aria-labelledby="adopta-titulo">
+      <h2 class="titulo titulo--rosa" id="adopta-titulo" data-ja="ねこの里親">Adopta un michi</h2>
+      <p class="adopta__texto">Estos gatitos rescatados viven en nuestra sala de michis mientras encuentran familia. Ven por un matcha, juega con ellos… y quizá te lleves a tu nuevo mejor amigo.</p>
+      <div class="galeria" aria-label="Fotos de los gatitos en adopción">
+        <ul class="galeria__pista" role="list">
+          <li><img src="img/adopta/gatitos-1.jpg" alt="Tres gatitos rescatados en un corral: dos atigrados grises y uno blanco de pelo largo mirando hacia arriba con curiosidad" width="1244" height="700" loading="lazy"></li>
+          <li><img src="img/adopta/gatitos-2.jpg" alt="Sala de michis con cinco gatos de pelo largo, blancos, crema y grises, descansando sobre un pequeño sillón amarillo y un puf azul" width="1283" height="700" loading="lazy"></li>
+          <li><img src="img/adopta/gatitos-3.jpg" alt="Gato blanco y negro acostado de lado sobre una cobija gris, mirando a la cámara con ojos grandes" width="933" height="700" loading="lazy"></li>
+          <li><img src="img/adopta/gatitos-4.jpg" alt="Gato atigrado durmiendo plácidamente sobre un cojín rosado, con una patita blanca colgando" width="1024" height="681" loading="lazy"></li>
+          <li><img src="img/adopta/gatitos-5.jpg" alt="Gatito bebé gris de ojos azules envuelto en una manta verde" width="1024" height="680" loading="lazy"></li>
+          <li><img src="img/adopta/gatitos-6.jpg" alt="Gato calicó acostado sobre una mesa de madera en un café de gatos decorado con un árbol y huellitas en la pared, con visitantes al fondo" width="1050" height="700" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ¿CÓMO ADOPTAR? ============ -->
+    <section class="como" id="como-adoptar" aria-labelledby="como-titulo">
+      <h2 class="titulo titulo--cafe" id="como-titulo" data-ja="里親になるには">¿Cómo adoptar?</h2>
+      <ol class="pasos" role="list">
+        <li class="paso"><span class="paso__num" aria-hidden="true">1</span><h3 class="paso__titulo">Conócelos</h3><p>Visita la sala de michis y comparte un rato con ellos mientras disfrutas tu bebida.</p></li>
+        <li class="paso"><span class="paso__num" aria-hidden="true">2</span><h3 class="paso__titulo">Solicitud</h3><p>Llena el formulario de adopción con nuestro equipo en el café.</p></li>
+        <li class="paso"><span class="paso__num" aria-hidden="true">3</span><h3 class="paso__titulo">Entrevista</h3><p>Conversamos contigo para encontrar el michi ideal para tu hogar.</p></li>
+        <li class="paso"><span class="paso__num" aria-hidden="true">4</span><h3 class="paso__titulo">¡A casa!</h3><p>Tu michi se va contigo vacunado, esterilizado y con mucho amor.</p></li>
+      </ol>
+      <aside class="sala" aria-labelledby="sala-titulo">
+        <img class="sala__icono" src="img/icono-michi.svg" alt="" width="62" height="58">
+        <div>
+          <h3 class="sala__titulo" id="sala-titulo">La sala de michis</h3>
+          <p class="sala__sub">Un espacio separado de la cocina, pensado para el bienestar de los gatitos.</p>
+          <ul class="sala__reglas" role="list">
+            <li>Lunes a viernes · 12:00 – 21:00</li>
+            <li>Lávate las manos antes de entrar</li>
+            <li>No los alimentes</li>
+            <li>Deja que ellos se acerquen</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ============ SOLICITUD DE ADOPCIÓN (formulario) ============ -->
+    <section class="solicitud" id="solicitud" aria-labelledby="solicitud-titulo">
+      <h2 class="titulo titulo--rosa" id="solicitud-titulo" data-ja="里親申し込み">Solicitud de adopción</h2>
+      <p class="solicitud__intro">¿Te enamoraste de un michi? Déjanos tus datos y te contactamos para agendar una visita a la sala de michis.</p>
+      <form class="formulario" id="formulario-adopcion" novalidate>
+        <div class="campo">
+          <label for="f-nombre">Nombre completo <span class="obligatorio" aria-hidden="true">*</span></label>
+          <input id="f-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="f-nombre-error" placeholder="Ej: Sofía Gómez">
+          <p class="campo__error" id="f-nombre-error" aria-live="polite"></p>
+        </div>
+        <div class="campo">
+          <label for="f-correo">Correo electrónico <span class="obligatorio" aria-hidden="true">*</span></label>
+          <input id="f-correo" name="correo" type="email" autocomplete="email" required aria-describedby="f-correo-error" placeholder="Ej: sofia@correo.com">
+          <p class="campo__error" id="f-correo-error" aria-live="polite"></p>
+        </div>
+        <div class="campo">
+          <label for="f-telefono">Teléfono <span class="opcional">(opcional)</span></label>
+          <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="f-telefono-error" placeholder="Ej: 300 123 4567">
+          <p class="campo__error" id="f-telefono-error" aria-live="polite"></p>
+        </div>
+        <div class="campo">
+          <label for="f-michi">¿Qué michi te gustaría conocer? <span class="obligatorio" aria-hidden="true">*</span></label>
+          <select id="f-michi" name="michi" required aria-describedby="f-michi-error">
+            <option value="">Elige una opción</option>
+            <option>Un gatito bebé</option>
+            <option>Un gato adulto</option>
+            <option>Aún no sé, quiero conocerlos a todos</option>
+          </select>
+          <p class="campo__error" id="f-michi-error" aria-live="polite"></p>
+        </div>
+        <fieldset class="campo campo--ancho opciones">
+          <legend>¿Tienes otras mascotas en casa?</legend>
+          <label class="opcion"><input type="radio" name="mascotas" value="si"> <span data-ja="はい">Sí</span></label>
+          <label class="opcion"><input type="radio" name="mascotas" value="no" checked> <span data-ja="いいえ">No</span></label>
+        </fieldset>
+        <div class="campo campo--ancho">
+          <label for="f-mensaje">Cuéntanos sobre tu hogar <span class="opcional">(opcional)</span></label>
+          <textarea id="f-mensaje" name="mensaje" rows="4" placeholder="Ej: vivo en apartamento, trabajo desde casa y me encantan los gatos tranquilos."></textarea>
+        </div>
+        <div class="campo campo--ancho">
+          <label class="opcion opcion--acepto">
+            <input id="f-acepto" name="acepto" type="checkbox" required aria-describedby="f-acepto-error">
+            <span data-ja="里親の手続きを進めるために、Michi Coffeeから連絡が来ることに同意します。">Acepto que Michi Coffee me contacte para continuar con el proceso de adopción.</span> <span class="obligatorio" aria-hidden="true">*</span>
+          </label>
+          <p class="campo__error" id="f-acepto-error" aria-live="polite"></p>
+        </div>
+        <p class="formulario__nota campo--ancho"><span aria-hidden="true">*</span> Campos obligatorios</p>
+        <button class="boton formulario__enviar campo--ancho" type="submit" data-ja="申し込む">Enviar solicitud</button>
+        <p class="formulario__exito campo--ancho" id="formulario-exito" role="status" hidden></p>
+      </form>
+    </section>
+
+    <!-- ============ UBICACIÓN ============ -->
+    <section class="ubicacion" id="ubicacion" aria-labelledby="ubicacion-titulo">
+      <h2 class="titulo titulo--rosa titulo--fredoka" id="ubicacion-titulo" data-ja="アクセス">Ubicación</h2>
+      <div class="ubicacion__grid">
+        <div class="ubicacion__info">
+          <dl class="datos">
+            <div><dt>Fecha</dt><dd>Lunes a Sábado</dd></div>
+            <div><dt>Horario</dt><dd>12:00 – 21:00</dd></div>
+            <div><dt>Dirección</dt><dd>Cl. 29 Nte. #6bis norte<br>Cali, Valle del Cauca – Colombia</dd></div>
+          </dl>
+          <a class="boton" href="https://www.google.com/maps/search/?api=1&amp;query=Cl.%2029%20Nte.%20%236bis%20norte%2C%20Cali%2C%20Valle%20del%20Cauca%2C%20Colombia" target="_blank" rel="noopener" data-ja="行き方">¿Cómo llegar?<span class="sr"> (abre Google Maps en otra pestaña)</span></a>
+        </div>
+        <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Cl.%2029%20Nte.%20%236bis%20norte%2C%20Cali%2C%20Valle%20del%20Cauca%2C%20Colombia" target="_blank" rel="noopener">
+          <img src="img/mapa.jpg" alt="Mapa del barrio San Antonio en Cali con las calles cercanas y la ubicación de Michi Coffee marcada con el ícono del gatito rosado en el centro" width="800" height="600" loading="lazy">
+          <img class="mapa__pin" src="img/icono-michi.svg" alt="" width="62" height="58">
+          <span class="sr">Abrir la ubicación en Google Maps (otra pestaña)</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contacto">
+    <div class="footer__grid">
+      <div class="footer__marca">
+        <img src="img/logo-michi.svg" alt="Logo de Michi Coffee, café de gatos (猫カフェ)" width="505" height="257" loading="lazy">
+        <address class="footer__datos">
+          <p><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Dirección: Cl. 3 #10 - 18, Comuna 3 (San Antonio)<br>Cali, Valle del Cauca - Colombia</span></p>
+          <p><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7zm14 2.9-7 4.5-7-4.5V17h14z"/></svg><span>Correo: <a href="mailto:michicoffee@gmail.com">michicoffee@gmail.com</a></span></p>
+          <p><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6 4 2.4-.9 1.5L11 13V6h2z"/></svg><span>Horarios: Lunes a Sábado de 12:00 - 21:00</span></p>
+        </address>
+      </div>
+      <nav class="footer__enlaces" aria-labelledby="enlaces-titulo">
+        <h2 class="footer__titulo" id="enlaces-titulo">Enlaces de interés</h2>
+        <ul role="list">
+          <li><a href="#menu">Nuestro menú</a></li>
+          <li><a href="#promos">Promociones</a></li>
+          <li><a href="#nosotros">¿Quiénes somos?</a></li>
+          <li><a href="#como-adoptar">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Términos y condiciones</a></li>
+          <li><a href="#contacto">Política de privacidad</a></li>
+        </ul>
+      </nav>
+      <div class="footer__redes">
+        <h2 class="footer__titulo">Síguenos <span aria-hidden="true">🌸</span></h2>
+        <p class="footer__titulo footer__titulo--movil" aria-hidden="true" data-ja="連絡先">Contacto</p>
+        <ul class="redes" role="list">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Michi Coffee (otra pestaña)"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 5.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok de Michi Coffee (otra pestaña)"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 2h3a5 5 0 0 0 4 4v3a8 8 0 0 1-4-1.2V15a7 7 0 1 1-7-7h.5v3.1H10a3.9 3.9 0 1 0 4 3.9z"/></svg></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Michi Coffee (otra pestaña)"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.5V14h2.7v8z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__legal">© 2026 MICHI COFFEE. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ============ VENTANA DE DETALLE (overlay del prototipo) ============ -->
+  <dialog class="detalle" id="detalle" aria-labelledby="detalle-nombre">
+    <div class="detalle__caja">
+      <!-- la foto y su texto alternativo cambian según el plato o promo que se abra (ver js/main.js) -->
+      <img class="detalle__img" id="detalle-img" src="img/promos/temporada-michi.jpg" alt="Foto real del plato seleccionado" width="800" height="640">
+      <span class="etiqueta detalle__etiqueta" id="detalle-etiqueta" hidden></span>
+      <div class="detalle__info">
+        <p class="detalle__cat" id="detalle-cat"></p>
+        <h2 class="detalle__nombre" id="detalle-nombre">Detalle del plato</h2>
+        <p class="detalle__jp" id="detalle-jp" lang="ja"></p>
+        <p class="detalle__desc" id="detalle-desc"></p>
+        <p class="detalle__precio"><span id="detalle-precio"></span> <s id="detalle-antes"></s></p>
+      </div>
+      <button class="detalle__cerrar" type="button" id="detalle-cerrar" aria-label="Cerrar">✕</button>
+    </div>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/modelos-3d.js" defer></script>
+</body>
+</html>
